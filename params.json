@@ -1,6 +1,6 @@
 {
   "name": "Open Source projects by Michael Müller",
   "tagline": "",
-  "body": "Test",
+  "body": "|Name|Description|Screenshot|\r\n|:---:|:---:|:---:|\r\n|Billy|A simple bill manager built with Electron.|![billy](https://raw.githubusercontent.com/haimich/billy/master/concept/accountants.png)|",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
