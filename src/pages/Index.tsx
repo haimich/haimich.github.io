@@ -166,6 +166,11 @@ const Index = () => {
             </p>
             <div className="mt-8 flex justify-center gap-4">
               <Button variant="outline" size="lg" asChild>
+                <a href="https://www.doyoubuzz.com/michael-muller-1" target="_blank" rel="noopener noreferrer">
+                  Resume
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
                 <a href="https://www.linkedin.com/in/michael-m%C3%BCller-9a90a6284/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="mr-2 h-5 w-5" />
                   LinkedIn
