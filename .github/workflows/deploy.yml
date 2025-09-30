@@ -39,6 +39,9 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Copy cup folder
+        run: cp -r ./cup ./dist/cup
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
@@ -46,11 +49,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
-
-      - name: Upload cup artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./cup
 
   deploy:
     environment:
