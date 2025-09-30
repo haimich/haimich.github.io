@@ -1,4 +1,4 @@
-# Portfoliorama
+# haimich.github.io
 This project was vibe coded with Lovable as a resumé website for myself.
 
 ## Getting started
