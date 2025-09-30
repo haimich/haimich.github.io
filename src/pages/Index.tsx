@@ -98,8 +98,12 @@ const Index = () => {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto flex h-24 items-center justify-between px-4">
-          <a href="" className="flex items-center">
-            <img src={logo} alt="Michael Müller Logo" className="h-24 w-24" />
+          <a href="" className="flex items-center" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+            <img 
+              src={logo} 
+              alt="Bananarama 🍌" 
+              className="h-24 w-24 transition-all duration-300 hover:scale-105 hover:rotate-12 cursor-pointer" 
+            />
           </a>
           <div className="flex gap-6">
             <a href="#about" className="text-sm font-medium text-foreground transition-colors hover:text-primary">
