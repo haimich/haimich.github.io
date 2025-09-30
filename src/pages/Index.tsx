@@ -123,7 +123,7 @@ const Index = () => {
               Michael Müller
             </h1>
             <p className="mb-8 text-xl md:text-2xl text-white/90">
-              Full-Stack Developer & AI Enthusiast
+              Engineering Manager 🧑‍💻 - Full-Stack Developer œ ❤️ - AI Enthusiast 🤖
             </p>
             <p className="mb-10 text-lg text-white/80">
               Building beautiful web applications with modern technologies like React, Vue, Node.js, and TypeScript. 
@@ -155,7 +155,7 @@ const Index = () => {
               About Me
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a full-stack developer with a passion for creating elegant, user-friendly web applications. 
+              I'm an Engineering Manager with a passion for creating elegant, user-friendly web applications. 
               With expertise in modern JavaScript frameworks and backend technologies, I've built everything from 
               food blogs to invoice managers to event management platforms. When I'm not coding, you'll find me 
               sharing knowledge through talks at conferences and universities.
