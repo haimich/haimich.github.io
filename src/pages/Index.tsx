@@ -11,14 +11,14 @@ const projects = [
     technologies: ["Vue.js", "Nuxt.js", "JavaScript"],
     githubUrl: "https://github.com/haimich/copyundpasta",
     demoUrl: "https://copyundpasta.de",
-    imageUrl: "https://raw.githubusercontent.com/haimich/haimich.github.io/master/images/copyundpasta.jpg"
+    imageUrl: "https://raw.githubusercontent.com/haimich/haimich.github.io/main/images/copyundpasta.jpg"
   },
   {
     name: "Billy",
     description: "A simple invoice manager built with Electron and React",
     technologies: ["Electron", "React", "JavaScript"],
     githubUrl: "https://github.com/haimich/billy",
-    imageUrl: "https://raw.githubusercontent.com/haimich/billy/master/concept/billy_sm.png"
+    imageUrl: "https://raw.githubusercontent.com/haimich/billy/main/concept/billy_sm.png"
   },
   {
     name: "sprachmuehle.de",
@@ -26,35 +26,35 @@ const projects = [
     technologies: ["HTML", "CSS", "PHP"],
     githubUrl: "https://github.com/haimich/sprachmuehle.de",
     demoUrl: "https://www.sprachmuehle.de/",
-    imageUrl: "https://raw.githubusercontent.com/haimich/haimich.github.io/master/images/sprachmuehle.jpg"
+    imageUrl: "https://raw.githubusercontent.com/haimich/haimich.github.io/main/images/sprachmuehle.jpg"
   },
   {
     name: "Event",
     description: "A platform to manage events and conferences built on NodeJS",
     technologies: ["Node.js", "JavaScript"],
     githubUrl: "https://github.com/haimich/event",
-    imageUrl: "https://raw.githubusercontent.com/haimich/event/master/documentation/screenshot_1.png"
+    imageUrl: "https://raw.githubusercontent.com/haimich/event/main/documentation/screenshot_1.png"
   },
   {
     name: "Flatfinder",
     description: "A web scraper tool that regularly scans websites where flats are offered to buy",
     technologies: ["Node.js", "Web Scraping"],
     githubUrl: "https://github.com/haimich/flatfinder",
-    imageUrl: "https://raw.githubusercontent.com/haimich/flatfinder/master/logo_small.png"
+    imageUrl: "https://raw.githubusercontent.com/haimich/flatfinder/main/logo_small.png"
   },
   {
     name: "Knick-Knack",
     description: "A language agnostic project scaffolding tool",
     technologies: ["JavaScript", "CLI"],
     githubUrl: "https://github.com/knick-knack/knick-knack",
-    imageUrl: "https://raw.githubusercontent.com/knick-knack/knick-knack/master/doc/knickknack_small.png"
+    imageUrl: "https://raw.githubusercontent.com/knick-knack/knick-knack/main/doc/knickknack_small.png"
   },
   {
     name: "Photobooth",
     description: "A JavaScript photobooth application where you can pick an own background image via green screen",
     technologies: ["JavaScript", "Canvas API"],
     githubUrl: "https://github.com/haimich/photobooth",
-    imageUrl: "https://raw.githubusercontent.com/haimich/photobooth/master/concept/photobooth_small.png"
+    imageUrl: "https://raw.githubusercontent.com/haimich/photobooth/main/concept/photobooth_small.png"
   }
 ];
 
