@@ -127,7 +127,7 @@ const Index = () => {
               Michael Müller
             </h1>
             <p className="mb-8 text-xl md:text-2xl text-white/90">
-              Engineering Manager 🧑‍💻 - Full-Stack Developer œ ❤️ - AI Enthusiast 🤖
+              Engineering Manager 🧑‍💻 & AI Enthusiast 🤖
             </p>
             <p className="mb-10 text-lg text-white/80">
               Building beautiful web applications with modern technologies like React, Vue, Node.js, and TypeScript. 
