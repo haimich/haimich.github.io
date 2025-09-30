@@ -47,6 +47,11 @@ jobs:
         with:
           path: ./dist
 
+      - name: Upload cup artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./cup
+
   deploy:
     environment:
       name: github-pages
