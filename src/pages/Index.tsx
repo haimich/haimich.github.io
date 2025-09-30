@@ -10,7 +10,7 @@ const projects = [
     description: "My own food blog based on VueJS and Nuxt.js",
     technologies: ["Vue.js", "Nuxt.js", "JavaScript"],
     githubUrl: "https://github.com/haimich/copyundpasta",
-    demoUrl: "https://haimich.github.io/cup/",
+    demoUrl: "https://copyundpasta.de",
     imageUrl: "https://raw.githubusercontent.com/haimich/haimich.github.io/master/images/copyundpasta.jpg"
   },
   {
