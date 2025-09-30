@@ -14,10 +14,15 @@
     <meta property="og:description" content="Portfolio showcasing open source projects and talks on web development" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="heart.png" />
+    
+    <!-- SPA fallback: redirect to index.html for client-side routing -->
+    <script>
+      sessionStorage.redirect = location.href;
+    </script>
+    <meta http-equiv="refresh" content="0;URL='/'"></meta>
   </head>
 
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- GitHub Pages SPA fallback -->
   </body>
 </html>
