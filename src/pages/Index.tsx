@@ -183,6 +183,7 @@ const Index = () => {
 
       {/* Projects Section */}
       <section id="projects" className="py-20">
+        <br />
         <div className="container mx-auto px-4">
           <div className="mb-12 text-center">
             <h2 className="mb-4 font-display text-4xl font-bold text-foreground">
