@@ -1,0 +1,263 @@
+---
+import Base from "../layouts/Base.astro";
+import { person, focus, work, projects, talks, community, career, hobbies } from "../data/site";
+---
+
+<Base
+  title={`${person.name}: ${person.tagline}`}
+  description={`${person.role} at ${person.company}. ${person.summary}`}
+>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo" aria-label="Back to top">
+        <img src="/images/mrbanana.png" alt="Mr Banana, my logo for the wild ride we're on with AI" width="56" height="56" />
+      </a>
+      <nav aria-label="Sections">
+        <ul>
+          <li><a href="#now">Now</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#talks">Talks</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow hero-eyebrow">{person.role} · {person.company}</p>
+          <h1>{person.name}</h1>
+          <p class="tagline">Building the paved road for <em>AI coding agents</em></p>
+          <p class="summary">{person.summary}</p>
+          <ul class="hero-links">
+            <li><a class="btn primary" href={person.links.linkedin}>LinkedIn</a></li>
+            <li><a class="btn" href={person.links.github}>GitHub</a></li>
+            <li><a class="btn" href={person.links.n8nCommunity}>n8n community</a></li>
+          </ul>
+        </div>
+        <img class="portrait" src="/images/michael.jpg" alt="Portrait of Michael Müller" width="320" height="320" />
+      </div>
+    </section>
+
+    <section id="now">
+      <div class="container">
+        <p class="eyebrow">What I do now</p>
+        <h2>Agents that work with developers, not beside them</h2>
+        <p class="lead">
+          I spent years as a full-stack developer and as an engineering manager. Today I combine both: I build the
+          tooling myself, and I make sure teams actually adopt it.
+        </p>
+        <div class="grid grid-3">
+          {focus.map((f) => (
+            <article class="card">
+              <p class="icon" aria-hidden="true">{f.icon}</p>
+              <h3>{f.title}</h3>
+              <p>{f.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <p class="eyebrow">Selected work</p>
+        <h2>How I approach agentic engineering</h2>
+        <p class="lead">
+          Most of this lives in private company repositories, so here is the pattern rather than the code: the problem,
+          what the agent may do, where humans stay in the loop, and what I learned.
+        </p>
+        <div class="grid grid-2">
+          {work.map((w) => (
+            <article class="card case">
+              <h3>{w.title}</h3>
+              <p class="problem">{w.problem}</p>
+              <ul class="steps">
+                {w.approach.map((a) => <li>{a}</li>)}
+              </ul>
+              <p class="lesson"><strong>Lesson:</strong> {w.lesson}</p>
+              <ul class="tags">
+                {w.tags.map((t) => <li>{t}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <h3 class="sub">Career</h3>
+        <ol class="timeline">
+          {career.map((c) => (
+            <li>
+              <span class="period">{c.period}</span>
+              <span class="role">{c.title}</span>
+              <span class="org">{c.org}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <section id="community">
+      <div class="container">
+        <p class="eyebrow">Open source &amp; community</p>
+        <h2>Building in the open</h2>
+        <p class="lead">I like helping other builders, and side projects are where I try new things first.</p>
+        <div class="grid grid-2">
+          {community.map((c) => (
+            <a class="card link-card" href={c.url}>
+              <h3>{c.title} <span aria-hidden="true">→</span></h3>
+              <p>{c.text}</p>
+            </a>
+          ))}
+        </div>
+
+        <h3 class="sub">Earlier projects</h3>
+        <div class="grid grid-3 projects">
+          {projects.map((p) => (
+            <article class="card project">
+              <img src={p.image} alt={`Screenshot or logo of ${p.name}`} loading="lazy" width="400" height="225" />
+              <div class="project-body">
+                <h4>{p.name}</h4>
+                <p>{p.description}</p>
+                <p class="project-links">
+                  <a href={p.repo}>Code</a>
+                  {p.demo && <a href={p.demo}>Website</a>}
+                </p>
+                <ul class="tags">
+                  {p.tech.map((t) => <li>{t}</li>)}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="talks">
+      <div class="container">
+        <p class="eyebrow">Talks</p>
+        <h2>Sharing what I learn</h2>
+        <p class="lead">Public talks and guest lectures. These days most of my talks are internal, on MCP, agents and n8n.</p>
+        <ul class="talks">
+          {talks.map((t) => (
+            <li class="card talk">
+              <div>
+                <h3>{t.title}</h3>
+                <p class="venue">{t.venue}{t.year && ` · ${t.year}`}</p>
+              </div>
+              <p class="talk-links">
+                {t.slides && <a href={t.slides}>Slides</a>}
+                {t.video && <a href={t.video}>Video</a>}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section id="beyond">
+      <div class="container beyond">
+        <p class="eyebrow">Beyond work</p>
+        <p class="hobbies">
+          {hobbies.map((h) => <span>{h}</span>)}
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© {new Date().getFullYear()} {person.name} · {person.location}</p>
+      <p>
+        Static site built with <a href="https://astro.build">Astro</a> and a coding agent ·
+        <a href="https://github.com/haimich/haimich.github.io">Source</a> ·
+        <a href="/llms.txt">llms.txt</a>
+      </p>
+    </div>
+  </footer>
+</Base>
+
+<style>
+  .skip { position: absolute; left: -999px; top: 8px; background: var(--surface); padding: 8px 12px; border-radius: 8px; z-index: 100; }
+  .skip:focus { left: 8px; }
+
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--hero-bg) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgb(255 255 255 / 0.06);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .logo img { width: 52px; height: 52px; transition: transform 0.3s ease; }
+  .logo:hover img { transform: rotate(12deg) scale(1.06); }
+  @media (prefers-reduced-motion: reduce) { .logo:hover img { transform: none; } }
+  .nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+  .nav a:not(.logo) { color: var(--hero-text); text-decoration: none; font-size: 0.92rem; padding: 8px 10px; border-radius: 8px; }
+  .nav a:not(.logo):hover { background: rgb(255 255 255 / 0.08); }
+
+  .hero { background: radial-gradient(ellipse at 75% 30%, #3a414a 0%, var(--hero-bg) 65%); color: var(--hero-text); padding: 64px 0 80px; border-top: 0; }
+  .hero-inner { display: grid; gap: 40px; align-items: center; }
+  @media (min-width: 860px) { .hero-inner { grid-template-columns: 1fr auto; gap: 64px; } }
+  .hero-eyebrow { color: var(--hero-accent); }
+  .hero h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); letter-spacing: -0.03em; }
+  .tagline { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 600; margin: 12px 0 16px; letter-spacing: -0.01em; }
+  .tagline em { font-style: normal; color: var(--hero-accent); }
+  .summary { color: var(--hero-muted); max-width: 56ch; margin: 0 0 28px; }
+  .hero-links { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 0; }
+  .btn {
+    display: inline-block; padding: 10px 18px; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 0.95rem;
+    color: var(--hero-text); border: 1px solid rgb(255 255 255 / 0.25);
+  }
+  .btn:hover { background: rgb(255 255 255 / 0.08); }
+  .btn.primary { background: var(--hero-accent); color: #1f2328; border-color: var(--hero-accent); }
+  .btn.primary:hover { filter: brightness(1.05); }
+  .portrait { width: min(280px, 70vw); height: auto; aspect-ratio: 1; border-radius: 50%; border: 4px solid rgb(185 196 154 / 0.5); justify-self: center; }
+
+  .icon { font-size: 1.8rem; margin: 0 0 8px; }
+  .card h3 { font-size: 1.15rem; margin-bottom: 8px; }
+  .card p { margin: 0; }
+
+  .case .problem { color: var(--muted); margin-bottom: 12px; }
+  .steps { margin: 0 0 14px; padding-left: 1.2em; }
+  .steps li { margin-bottom: 6px; }
+  .lesson { background: var(--surface-2); border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 0 8px 8px 0; font-size: 0.95rem; }
+
+  .sub { font-size: 1.25rem; margin: 48px 0 16px; }
+  .timeline { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--border); }
+  .timeline li { display: grid; gap: 2px 16px; padding: 8px 0 8px 20px; position: relative; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: 16px; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent); }
+  @media (min-width: 720px) { .timeline li { grid-template-columns: 130px 1fr auto; } }
+  .period { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); padding-top: 2px; }
+  .role { font-weight: 600; }
+  .org { color: var(--muted); }
+
+  .link-card { text-decoration: none; color: inherit; transition: border-color 0.2s; }
+  .link-card:hover { border-color: var(--accent); }
+  .link-card h3 { color: var(--accent); }
+
+  .projects { gap: 16px; }
+  .project { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+  .project img { width: 100%; height: 160px; object-fit: cover; background: var(--surface-2); border-bottom: 1px solid var(--border); }
+  .project-body { padding: 16px 18px 18px; }
+  .project h4 { margin: 0 0 6px; font-size: 1.02rem; }
+  .project p { font-size: 0.93rem; color: var(--muted); }
+  .project-links { display: flex; gap: 14px; margin-top: 8px !important; }
+  .project .tags { margin-top: 10px; }
+
+  .talks { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  .talk { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px; padding: 16px 20px; }
+  .talk h3 { font-size: 1.05rem; margin: 0; }
+  .venue { color: var(--muted); font-size: 0.92rem; }
+  .talk-links { display: flex; gap: 14px; }
+
+  .beyond { text-align: center; }
+  .hobbies { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0; }
+  .hobbies span { padding: 8px 16px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 0 40px; color: var(--muted); font-size: 0.9rem; }
+  .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+  footer p { margin: 0; }
+</style>
