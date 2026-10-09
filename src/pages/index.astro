@@ -31,12 +31,11 @@ import { person, focus, work, projects, talks, community, career, hobbies } from
         <div class="hero-text">
           <p class="eyebrow hero-eyebrow">{person.role} · {person.company}</p>
           <h1>{person.name}</h1>
-          <p class="tagline">Building the paved road for <em>AI coding agents</em></p>
+          <p class="tagline">Developer productivity in the age of <em>AI coding agents</em></p>
           <p class="summary">{person.summary}</p>
           <ul class="hero-links">
             <li><a class="btn primary" href={person.links.linkedin}>LinkedIn</a></li>
             <li><a class="btn" href={person.links.github}>GitHub</a></li>
-            <li><a class="btn" href={person.links.n8nCommunity}>n8n community</a></li>
           </ul>
         </div>
         <img class="portrait" src="/images/michael.jpg" alt="Portrait of Michael Müller" width="320" height="320" />
@@ -46,7 +45,7 @@ import { person, focus, work, projects, talks, community, career, hobbies } from
     <section id="now">
       <div class="container">
         <p class="eyebrow">What I do now</p>
-        <h2>Agents that work with developers, not beside them</h2>
+        <h2>AI agents as part of everyday engineering</h2>
         <p class="lead">
           I spent years as a full-stack developer and as an engineering manager. Today I combine both: I build the
           tooling myself, and I make sure teams actually adopt it.
@@ -140,7 +139,7 @@ import { person, focus, work, projects, talks, community, career, hobbies } from
       <div class="container">
         <p class="eyebrow">Talks</p>
         <h2>Sharing what I learn</h2>
-        <p class="lead">Public talks and guest lectures. These days most of my talks are internal, on MCP, agents and n8n.</p>
+        <p class="lead">Public talks and guest lectures. These days most of my talks are internal, on MCP, AI agents and workflow automation.</p>
         <ul class="talks">
           {talks.map((t) => (
             <li class="card talk">

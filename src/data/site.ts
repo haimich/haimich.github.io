@@ -5,14 +5,13 @@ export const person = {
   name: "Michael Müller",
   role: "Senior Developer Productivity Engineer",
   company: "Leadfeeder",
-  tagline: "Building the paved road for AI coding agents",
+  tagline: "Developer productivity in the age of AI coding agents",
   summary:
-    "I make AI coding agents useful, safe and measurable for whole engineering teams: the platforms, guardrails and workflows that let agents work with developers, not beside them.",
+    "I help engineering teams get real value from AI coding agents: the platforms, guardrails and workflows that make agents useful, safe and measurable in everyday development.",
   location: "Palatinate, Germany · remote",
   links: {
     github: "https://github.com/haimich",
     linkedin: "https://www.linkedin.com/in/michael-m%C3%BCller-9a90a6284/",
-    n8nCommunity: "https://community.n8n.io/u/haimich",
   },
 };
 
@@ -43,12 +42,12 @@ export const work: CaseStudy[] = [
     title: "From error report to agent-written fix",
     problem: "New production errors piled up faster than teams could triage them, and many easy fixes never got done.",
     approach: [
-      "An n8n agent classifies each new error, scores how likely a coding agent can fix it and runs a root-cause analysis.",
+      "A workflow agent classifies each new error, scores how likely a coding agent can fix it and runs a root-cause analysis.",
       "The result lands in the team's Slack channel with a recommendation. One click creates a Linear issue and hands it to a coding agent.",
       "An auto mode starts the fix on its own, but only when the fixability score is high. Every change still goes through a PR and human review.",
     ],
     lesson: "Build the feedback loop in from day one. Without it, an agent cannot learn from wrong scores or rejected PRs.",
-    tags: ["n8n", "Coding agents", "Linear", "Human-in-the-loop"],
+    tags: ["Workflow automation", "Coding agents", "Linear", "Human-in-the-loop"],
   },
   {
     title: "A marketplace for agent plugins and skills",
@@ -70,7 +69,7 @@ export const work: CaseStudy[] = [
       "A weekly self-review checks its own routing decisions and improves which services belong to which team.",
     ],
     lesson: "Start with read-only autonomy and widen it step by step, once the data shows the agent gets it right.",
-    tags: ["n8n", "Security", "Guardrails", "Self-improving agents"],
+    tags: ["Workflow automation", "Security", "Guardrails", "Self-improving agents"],
   },
   {
     title: "A serverless framework that agents can use too",
