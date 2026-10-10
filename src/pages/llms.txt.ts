@@ -1,26 +1,23 @@
 import type { APIRoute } from "astro";
-import { person, focus, work, community, talks, career } from "../data/site";
+import { person, community, talks, hobbies } from "../data/site";
 
 // Generated from the same data as the HTML page, so the two cannot drift apart.
 export const GET: APIRoute = () => {
   const lines = [
     `# ${person.name}`,
     "",
-    `> ${person.role} at ${person.company}. ${person.tagline}. ${person.summary}`,
+    `> ${person.role}. ${person.summary}`,
     "",
-    "## Focus",
-    ...focus.map((f) => `- ${f.title}: ${f.text}`),
-    "",
-    "## Selected work",
-    ...work.flatMap((w) => [`### ${w.title}`, `Problem: ${w.problem}`, ...w.approach.map((a) => `- ${a}`), `Lesson: ${w.lesson}`, ""]),
-    "## Career",
-    ...career.map((c) => `- ${c.period}: ${c.title}, ${c.org}`),
+    "Career and current work: see LinkedIn (link below).",
     "",
     "## Community",
     ...community.map((c) => `- [${c.title}](${c.url}): ${c.text}`),
     "",
     "## Talks",
     ...talks.map((t) => `- ${t.title} (${t.venue}${t.year ? `, ${t.year}` : ""})`),
+    "",
+    "## Beyond work",
+    hobbies.join(", "),
     "",
     "## Links",
     ...Object.entries(person.links).map(([k, v]) => `- ${k}: ${v}`),

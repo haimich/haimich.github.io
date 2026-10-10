@@ -18,12 +18,12 @@ The personal site of Michael Müller, served at https://haimich.github.io. It is
 - `pnpm verify`: type check, build, HTML validation and internal link check. **Run it before every PR. CI runs the same command.**
 
 ## Rules
-- **No confidential information.** Do not add internal numbers, internal product names, customer names or anything else from current or past employers that is not public. Describe the pattern, not the internals.
+- **This is a personal page, not a CV.** Do not add details about current or past jobs (projects, numbers, internal names, employers' initiatives). The career lives on LinkedIn; link there instead.
 - No new runtime JavaScript unless the change clearly needs it. The site must stay readable without JavaScript.
 - No new dependencies without a clear reason in the PR description. Pin exact versions.
 - Keep the page accessible: alt text on images, visible focus, sufficient contrast in both colour schemes.
 - Fill in the PR template, including the evidence section.
 
 ## What needs a human
-- Any change to wording about the author's current employer, career or achievements.
+- Any change to the personal summary, or anything that touches on the author's work life.
 - Anything in `.github/workflows/` (deploy permissions).

@@ -1,11 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
-import { person, focus, work, projects, talks, community, career, hobbies } from "../data/site";
+import { person, projects, talks, community, hobbies } from "../data/site";
 ---
 
 <Base
   title={`${person.name}: ${person.tagline}`}
-  description={`${person.role} at ${person.company}. ${person.summary}`}
+  description={person.summary}
 >
   <a class="skip" href="#main">Skip to content</a>
 
@@ -16,9 +16,7 @@ import { person, focus, work, projects, talks, community, career, hobbies } from
       </a>
       <nav aria-label="Sections">
         <ul>
-          <li><a href="#now">Now</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#community">Community</a></li>
+          <li><a href="#community">Projects</a></li>
           <li><a href="#talks">Talks</a></li>
         </ul>
       </nav>
@@ -29,7 +27,7 @@ import { person, focus, work, projects, talks, community, career, hobbies } from
     <section class="hero" id="top">
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="eyebrow hero-eyebrow">{person.role} · {person.company}</p>
+          <p class="eyebrow hero-eyebrow">{person.role}</p>
           <h1>{person.name}</h1>
           <p class="tagline">Developer productivity in the age of <em>AI coding agents</em></p>
           <p class="summary">{person.summary}</p>
@@ -42,60 +40,13 @@ import { person, focus, work, projects, talks, community, career, hobbies } from
       </div>
     </section>
 
-    <section id="now">
-      <div class="container">
-        <p class="eyebrow">What I do now</p>
-        <h2>AI agents as part of everyday engineering</h2>
-        <p class="lead">
-          I spent years as a full-stack developer and as an engineering manager. Today I combine both: I build the
-          tooling myself, and I make sure teams actually adopt it.
+    <section id="about">
+      <div class="container about">
+        <p class="lead about-text">
+          My career, current role and work experience are on LinkedIn. This page is the personal side: side projects,
+          community work and talks.
         </p>
-        <div class="grid grid-3">
-          {focus.map((f) => (
-            <article class="card">
-              <p class="icon" aria-hidden="true">{f.icon}</p>
-              <h3>{f.title}</h3>
-              <p>{f.text}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section id="work">
-      <div class="container">
-        <p class="eyebrow">Selected work</p>
-        <h2>How I approach agentic engineering</h2>
-        <p class="lead">
-          Most of this lives in private company repositories, so here is the pattern rather than the code: the problem,
-          what the agent may do, where humans stay in the loop, and what I learned.
-        </p>
-        <div class="grid grid-2">
-          {work.map((w) => (
-            <article class="card case">
-              <h3>{w.title}</h3>
-              <p class="problem">{w.problem}</p>
-              <ul class="steps">
-                {w.approach.map((a) => <li>{a}</li>)}
-              </ul>
-              <p class="lesson"><strong>Lesson:</strong> {w.lesson}</p>
-              <ul class="tags">
-                {w.tags.map((t) => <li>{t}</li>)}
-              </ul>
-            </article>
-          ))}
-        </div>
-
-        <h3 class="sub">Career</h3>
-        <ol class="timeline">
-          {career.map((c) => (
-            <li>
-              <span class="period">{c.period}</span>
-              <span class="role">{c.title}</span>
-              <span class="org">{c.org}</span>
-            </li>
-          ))}
-        </ol>
+        <a class="btn-outline" href={person.links.linkedin}>View my career on LinkedIn <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
@@ -139,7 +90,7 @@ import { person, focus, work, projects, talks, community, career, hobbies } from
       <div class="container">
         <p class="eyebrow">Talks</p>
         <h2>Sharing what I learn</h2>
-        <p class="lead">Public talks and guest lectures. These days most of my talks happen at Campus, the internal knowledge-sharing session I started, on MCP, AI agents and workflow automation.</p>
+        <p class="lead">Public talks and guest lectures from the last years.</p>
         <ul class="talks">
           {talks.map((t) => (
             <li class="card talk">
@@ -215,23 +166,11 @@ import { person, focus, work, projects, talks, community, career, hobbies } from
   .btn.primary:hover { filter: brightness(1.05); }
   .portrait { width: min(280px, 70vw); height: auto; aspect-ratio: 1; border-radius: 50%; border: 4px solid rgb(185 196 154 / 0.5); justify-self: center; }
 
-  .icon { font-size: 1.8rem; margin: 0 0 8px; }
   .card h3 { font-size: 1.15rem; margin-bottom: 8px; }
   .card p { margin: 0; }
 
-  .case .problem { color: var(--muted); margin-bottom: 12px; }
-  .steps { margin: 0 0 14px; padding-left: 1.2em; }
-  .steps li { margin-bottom: 6px; }
-  .lesson { background: var(--surface-2); border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 0 8px 8px 0; font-size: 0.95rem; }
 
   .sub { font-size: 1.25rem; margin: 48px 0 16px; }
-  .timeline { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--border); }
-  .timeline li { display: grid; gap: 2px 16px; padding: 8px 0 8px 20px; position: relative; }
-  .timeline li::before { content: ""; position: absolute; left: -7px; top: 16px; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent); }
-  @media (min-width: 720px) { .timeline li { grid-template-columns: 130px 1fr auto; } }
-  .period { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); padding-top: 2px; }
-  .role { font-weight: 600; }
-  .org { color: var(--muted); }
 
   .link-card { text-decoration: none; color: inherit; transition: border-color 0.2s; }
   .link-card:hover { border-color: var(--accent); }
@@ -252,6 +191,10 @@ import { person, focus, work, projects, talks, community, career, hobbies } from
   .venue { color: var(--muted); font-size: 0.92rem; }
   .talk-links { display: flex; gap: 14px; }
 
+  .about { text-align: center; }
+  .about-text { margin: 0 auto 20px; }
+  .btn-outline { display: inline-block; padding: 10px 20px; border-radius: 999px; border: 1px solid var(--accent); text-decoration: none; font-weight: 600; }
+  .btn-outline:hover { background: var(--accent-soft); }
   .beyond { text-align: center; }
   .hobbies { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0; }
   .hobbies span { padding: 8px 16px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }
