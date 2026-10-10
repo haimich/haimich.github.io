@@ -16,7 +16,6 @@ const jsonLd = {
   "@type": "Person",
   name: person.name,
   jobTitle: person.role,
-  worksFor: { "@type": "Organization", name: person.company },
   description: person.summary,
   url: Astro.site?.toString(),
   image: new URL("/images/michael.jpg", Astro.site).toString(),
