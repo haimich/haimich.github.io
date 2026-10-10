@@ -36,11 +36,4 @@ export const talks: Talk[] = [
   { title: "ReactJS · TypeScript · Electron", venue: "Guest lectures, HdM Stuttgart", slides: "http://slides.com/haimich/reactjs" },
 ];
 
-export type CommunityItem = { title: string; text: string; url: string };
-
-export const community: CommunityItem[] = [
-  { title: "n8n community forum", text: "Helping other builders with workflows, nodes and agents.", url: "https://community.n8n.io/u/haimich" },
-  { title: "Custom n8n node tutorial", text: "A step-by-step TypeScript tutorial for building a custom n8n node (NASA API).", url: "https://github.com/haimich/n8n-nasa" },
-];
-
 export const hobbies = ["Padel", "Bouldering", "3D printing", "Electronics projects"];

@@ -1,6 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
-import { person, projects, talks, community, hobbies } from "../data/site";
+import { person, projects, talks, hobbies } from "../data/site";
 ---
 
 <Base
@@ -16,7 +16,7 @@ import { person, projects, talks, community, hobbies } from "../data/site";
       </a>
       <nav aria-label="Sections">
         <ul>
-          <li><a href="#community">Projects</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#talks">Talks</a></li>
         </ul>
       </nav>
@@ -43,28 +43,17 @@ import { person, projects, talks, community, hobbies } from "../data/site";
     <section id="about">
       <div class="container about">
         <p class="lead about-text">
-          My career, current role and work experience are on LinkedIn. This page is the personal side: side projects,
-          community work and talks.
+          My career, current role and work experience are on LinkedIn. This page is the personal side: side projects and talks.
         </p>
         <a class="btn-outline" href={person.links.linkedin}>View my career on LinkedIn <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
-    <section id="community">
+    <section id="projects">
       <div class="container">
-        <p class="eyebrow">Open source &amp; community</p>
-        <h2>Building in the open</h2>
-        <p class="lead">I like helping other builders, and side projects are where I try new things first.</p>
-        <div class="grid grid-2">
-          {community.map((c) => (
-            <a class="card link-card" href={c.url}>
-              <h3>{c.title} <span aria-hidden="true">→</span></h3>
-              <p>{c.text}</p>
-            </a>
-          ))}
-        </div>
-
-        <h3 class="sub">Earlier projects</h3>
+        <p class="eyebrow">Side projects</p>
+        <h2>Things I've built</h2>
+        <p class="lead">Side projects are where I try new things first.</p>
         <div class="grid grid-3 projects">
           {projects.map((p) => (
             <article class="card project">
@@ -170,11 +159,7 @@ import { person, projects, talks, community, hobbies } from "../data/site";
   .card p { margin: 0; }
 
 
-  .sub { font-size: 1.25rem; margin: 48px 0 16px; }
 
-  .link-card { text-decoration: none; color: inherit; transition: border-color 0.2s; }
-  .link-card:hover { border-color: var(--accent); }
-  .link-card h3 { color: var(--accent); }
 
   .projects { gap: 16px; }
   .project { padding: 0; overflow: hidden; display: flex; flex-direction: column; }

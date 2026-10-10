@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { person, community, talks, hobbies } from "../data/site";
+import { person, projects, talks, hobbies } from "../data/site";
 
 // Generated from the same data as the HTML page, so the two cannot drift apart.
 export const GET: APIRoute = () => {
@@ -10,8 +10,8 @@ export const GET: APIRoute = () => {
     "",
     "Career and current work: see LinkedIn (link below).",
     "",
-    "## Community",
-    ...community.map((c) => `- [${c.title}](${c.url}): ${c.text}`),
+    "## Side projects",
+    ...projects.map((p) => `- [${p.name}](${p.repo}): ${p.description}`),
     "",
     "## Talks",
     ...talks.map((t) => `- ${t.title} (${t.venue}${t.year ? `, ${t.year}` : ""})`),
