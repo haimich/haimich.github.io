@@ -36,4 +36,4 @@ export const talks: Talk[] = [
   { title: "ReactJS · TypeScript · Electron", venue: "Guest lectures, HdM Stuttgart", slides: "http://slides.com/haimich/reactjs" },
 ];
 
-export const hobbies = ["Padel", "Bouldering", "3D printing", "Electronics projects"];
+export const hobbies = ["Padel", "Bouldering", "Cooking", "3D printing", "Electronics projects"];
