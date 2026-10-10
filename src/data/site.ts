@@ -109,6 +109,7 @@ export const talks: Talk[] = [
 export type CommunityItem = { title: string; text: string; url: string };
 
 export const community: CommunityItem[] = [
+  { title: "Campus", text: "I started Campus, a developer-led knowledge-sharing session at my company, and I still organize it. Lately I often speak there about MCP and AI agents.", url: "#talks" },
   { title: "n8n community forum", text: "Helping other builders with workflows, nodes and agents.", url: "https://community.n8n.io/u/haimich" },
   { title: "Custom n8n node tutorial", text: "A step-by-step TypeScript tutorial for building a custom n8n node (NASA API).", url: "https://github.com/haimich/n8n-nasa" },
 ];
