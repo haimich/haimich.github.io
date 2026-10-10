@@ -1,38 +1,19 @@
 # haimich.github.io
-This project was vibe coded with Lovable as a resumé website for myself.
 
-## Getting started
-The only requirement is having Node.js & pnpm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating) and [install pnpm](https://pnpm.io/installation)
+My personal site: https://haimich.github.io
 
-Follow these steps:
+A static [Astro](https://astro.build) site. Every page is plain HTML, so people, crawlers and AI agents all see the same content. There is also an [`/llms.txt`](https://haimich.github.io/llms.txt), generated from the same data as the page.
+
+## Working on it
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
 pnpm install
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-pnpm dev
+pnpm dev      # http://localhost:4321
+pnpm verify   # type check, build, HTML validation, internal link check
 ```
 
-## Build for production
+- Content lives in `src/data/site.ts`.
+- Coding agents: read [AGENTS.md](AGENTS.md) first.
+- Every PR runs `pnpm verify` in CI. A push to `main` deploys to GitHub Pages.
 
-```sh
-# Step 1: Build the project for production.
-pnpm build
-```
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+`cup/` is an old static food blog. It is copied into the build unchanged.
