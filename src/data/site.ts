@@ -17,6 +17,7 @@ export const person = {
 export type Project = { name: string; description: string; tech: string[]; repo: string; demo?: string; image: string };
 
 export const projects: Project[] = [
+  { name: "Glossar-Meister", description: "A flashcard app with spaced repetition for learning technical vocabulary between German and Romanian. Built with Lovable.", tech: ["Lovable", "React", "TypeScript"], repo: "https://github.com/haimich/glossar-meister", image: "/images/projects/glossar-meister.png" },
   { name: "Copy & Pasta", description: "My food blog, built with Vue.js and Nuxt.", tech: ["Vue.js", "Nuxt"], repo: "https://github.com/haimich/copyundpasta", demo: "https://copyundpasta.de", image: "/images/projects/copyundpasta.jpg" },
   { name: "Billy", description: "A simple invoice manager built with Electron and React.", tech: ["Electron", "React", "TypeScript"], repo: "https://github.com/haimich/billy", image: "/images/projects/billy.png" },
   { name: "sprachmuehle.de", description: "A static website built with HTML, CSS and a little PHP.", tech: ["HTML", "CSS", "PHP"], repo: "https://github.com/haimich/sprachmuehle.de", demo: "https://www.sprachmuehle.de/", image: "/images/projects/sprachmuehle.jpg" },
