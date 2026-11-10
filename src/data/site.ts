@@ -17,6 +17,7 @@ export const person = {
 export type Project = { name: string; description: string; tech: string[]; repo: string; demo?: string; image: string };
 
 export const projects: Project[] = [
+  { name: "pokéOS", description: "A Pokémon quiz game disguised as a Linux terminal, built on PokeAPI. It starts easy and gets nerdier as you rank up.", tech: ["Vue.js", "Vite", "PokeAPI"], repo: "https://github.com/haimich/pokeos", image: "/images/projects/pokeos.jpg" },
   { name: "Glossar-Meister", description: "A flashcard app with spaced repetition for learning technical vocabulary between German and Romanian. Built with Lovable.", tech: ["Lovable", "React", "TypeScript"], repo: "https://github.com/haimich/glossar-meister", image: "/images/projects/glossar-meister.png" },
   { name: "Copy & Pasta", description: "My food blog, built with Vue.js and Nuxt.", tech: ["Vue.js", "Nuxt"], repo: "https://github.com/haimich/copyundpasta", demo: "https://copyundpasta.de", image: "/images/projects/copyundpasta.jpg" },
   { name: "Billy", description: "A simple invoice manager built with Electron and React.", tech: ["Electron", "React", "TypeScript"], repo: "https://github.com/haimich/billy", image: "/images/projects/billy.png" },
